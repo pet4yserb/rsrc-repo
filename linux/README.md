@@ -47,3 +47,6 @@
 
 **fw.txt**
 > IPtables script for hardening network access to Linux hosts
+
+**backup.sh**
+> This is a script that performs an archival of important Linux OS directories

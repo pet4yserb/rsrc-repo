@@ -1,1 +1,1 @@
-# resource-repo
+# wazuh resource-repo

@@ -27,7 +27,7 @@
 > user input is requested to direct the forwarder to the proper Splunk Server.
 
 *Usage:*
-      ``` ./splunkforwarder.sh```
+      ``` ./splunkforwarder.sh ```
 
 **splunkforwarder.tgz**
 > this file is the Splunk Universal Forwarder that, once configured, allows a machine to send logs to
@@ -40,8 +40,10 @@
 
 **wazuh.sh**
 > This is a shell script for implementing Wazuh Agent on popular Linux Distros
-> Usage: ./wazuh.sh (or) bash wazuh
 
+*Usage:*
+      ``` ./wazuh.sh or bash wazuh ```
+      
 **Wazuh Agent** 
 > Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
@@ -50,3 +52,6 @@
 
 **backup.sh**
 > This is a script that performs an archival of important Linux OS directories
+
+*Usage:*
+      ``` ./backup.sh ```

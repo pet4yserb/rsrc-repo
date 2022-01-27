@@ -1,1 +1,1 @@
-# resouce-repo
+# resource-repo

@@ -1,2 +1,2 @@
-# resource-repo
+# exchange resource-repo
 Exchange Patches

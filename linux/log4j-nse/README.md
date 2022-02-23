@@ -1,4 +1,5 @@
 # nse-log4shell
+CREDIT - https://github.com/Diverto/nse-log4shell
 
 Nmap NSE scripts to check against log4shell or LogJam vulnerabilities (CVE-2021-44228).
 NSE scripts check most popular exposed services on the Internet. It is basic script where you can customize payload.

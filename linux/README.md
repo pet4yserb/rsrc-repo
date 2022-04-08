@@ -48,10 +48,31 @@
 > Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
 **fw.txt**
-> IPtables script for hardening network access to Linux hosts
+> IPtables rules for hardening network access to Linux hosts
 
 **backup.sh**
 > This is a script that performs an archival of important Linux OS directories
 
 *Usage:*
       ``` ./backup.sh ```
+**backup.sh**
+> This is a script that performs an archival of important Linux OS directories
+
+*Usage:*
+      ``` ./backup.sh ```
+**backup.sh**
+> This is a script that performs an archival of important Linux OS directories
+
+*Usage:*
+      ``` ./backup.sh ```
+**inet.sh**
+> This is a script to make exceptions to the existing iptables ruleset
+
+*Usage:*
+ ``` ./inet.sh```
+ 
+ **potatoes.sh**
+ > This is a script that changes user configurations
+ 
+ *Usage:*
+ ``` ./potatoes.sh ```

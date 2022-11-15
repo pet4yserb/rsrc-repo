@@ -1,0 +1,16 @@
+deb http://old-releases.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse
+
+deb-src http://old-releases.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse
+
+
+deb http://old-releases.ubuntu.com/ubuntu precise-security main restricted
+
+deb-src http://old-releases.ubuntu.com/ubuntu precise-security main restricted
+
+deb http://old-releases.ubuntu.com/ubuntu precise-security universe
+
+deb-src http://old-releases.ubuntu.com/ubuntu precise-security universe
+
+deb http://old-releases.ubuntu.com/ubuntu precise-security multiverse
+
+deb-src http://old-releases.ubuntu.com/ubuntu precise-security multiverse

@@ -44,3 +44,6 @@ cd /opt/splunkforwarder/bin
 ./splunk restart
 echo "adding 'iptables -I INPUT -p tcp --sport 9997 -s $ip -j ACCEPT'"
 echo "adding 'iptables -I OUTPUT -p tcp --dport 9997 -d $ip -j ACCEPT'"
+auditctl -a exit,always -F arch=b32 -S execve -k allcmds
+auditctl -a exit,always -F arch=b64 -S execve -k allcmds
+echo "added auditd rules"

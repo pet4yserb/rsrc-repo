@@ -1,0 +1,58 @@
+<form version="1.1" theme="dark">
+  <label>User Login Activity</label>
+  <fieldset submitButton="false">
+    <input type="time" token="field1">
+      <label></label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="text" token="user" searchWhenChanged="true">
+      <label>user</label>
+      <default>*</default>
+    </input>
+    <input type="text" token="host" searchWhenChanged="true">
+      <label>host</label>
+      <default>*</default>
+    </input>
+    <input type="text" token="attacker" searchWhenChanged="true">
+      <label>attacker</label>
+      <default>*</default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>LINUX LOGS</title>
+      <table>
+        <title>User Logins by Host</title>
+        <search>
+          <query>index=main source=/var/log/auth.log ("Failed password" OR "Accepted password") | eval HOST=trim(replace(host,"-","."),"ip.")|rex field=_raw "^[^\]\n]*\]:\s+(?P&lt;TYPE&gt;\w+) password for (?&lt;USER&gt;\w+) from (?&lt;IPADDR&gt;[^ ]+)" | search HOST=$host$ | search USER=$user$ | search IPADDR=$attacker$|table _time,TYPE,HOST,USER,IPADDR,process</query>
+          <earliest>$field1.earliest$</earliest>
+          <latest>$field1.latest$</latest>
+        </search>
+        <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>WINDOWS LOGS</title>
+      <table>
+        <title>User Logins by Host</title>
+        <search>
+          <query>index=main source="wineventlog:security" (EventCode=4624 OR EventCode=4625) 
+| search Account_Name=$user$ 
+| search $host$ 
+| search $attacker$ 
+| table _time, Keywords, host,Account_Name, Source_Network_Address</query>
+          <earliest>$field1.earliest$</earliest>
+          <latest>$field1.latest$</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+</form>

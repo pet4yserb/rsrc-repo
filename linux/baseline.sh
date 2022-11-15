@@ -9,18 +9,18 @@ echo "\033[33m[+] IP Address(es): \033[0m"
 ip addr | grep -o 'inet .*'
 echo ""
 
-echo "\033[33mWould you like to set all service accounts to /bin/false (y/n)?\033[0m"
+echo "\033[33mWould you like to set all service accounts to /bin/bash (y/n)?\033[0m"
 read input
 
-# If user input is 'y' => set login shells for UID < 1000 to /bin/false || /usr/sbin/nologin
+# If user input is 'y' => set login shells for UID < 1000 to /bin/bash || /usr/sbin/nologin
 if [ "$input" = "y" ]; then
    echo ""
-   echo "Setting all service accounts to /bin/false \n"
+   echo "Setting all service accounts to /bin/shit \n"
    users=$(awk -F: '$3 < 1000 { print $1 }' /etc/passwd)
    for user in $users; do
          if [ "$user" != "root" ]; then
-             # If it's not root, change the login shell to /bin/false or /usr/sbin/nologin
-             chsh -s /bin/false $user
+             # If it's not root, change the login shell to /bin/bash or /usr/sbin/nologin
+             chsh -s /bin/bash $user
          fi
    done
 else
@@ -51,3 +51,8 @@ w -h
 echo ""
 echo "\033[31mListening processes \033[0m"
 netstat -lntp | grep :
+
+# Running processes
+echo ""
+echo "\033[31mRunning process \033[0m"
+ps aux

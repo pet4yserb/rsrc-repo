@@ -1,5 +1,5 @@
 <form version="1.1" theme="dark">
-  <label>CCDC Scored Services Monitoring</label>
+  <label>Scored Services Monitoring</label>
   <fieldset submitButton="true">
     <input type="time" token="field1" searchWhenChanged="true">
       <label></label>

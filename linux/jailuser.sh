@@ -36,7 +36,8 @@ mkdir -p $JAILPATH
 # Add the apps you want the user to have access to in their jailed
 # environment.
 #
-APPS="/bin/bash /bin/cat /bin/curl /bin/whoami /bin/vim /bin/cp /bin/grep /bin/ls /bin/mkdir /bin/more /bin/mv /bin/pwd /usr/bin/du /usr/bin/head /usr/bin/id /usr/bin/less /usr/bin/ssh /usr/bin/scp /usr/bin/tail /usr/bin/rsync"
+#APPS="/bin/bash /bin/cat /bin/curl /bin/whoami /bin/vim /bin/cp /bin/grep /bin/ls /bin/mkdir /bin/more /bin/mv /bin/pwd /usr/bin/du /usr/bin/head /usr/bin/id /usr/bin/less /usr/bin/ssh /usr/bin/scp /usr/bin/tail /usr/bin/rsync"
+APPS="`which bash` `which cat` `which cp` `which grep` `which ls` `which mkdir` `which more` `which mv` `which pwd` `which rm` `which rmdir` `which du` `which head` `which id` `which less` `which ssh` `which scp` `which tail` `which rsync` `which whoami` `which curl` `which vim` `which echo` `which md5sum`"
 
 
 if ! getent group jailed > /dev/null 2>&1

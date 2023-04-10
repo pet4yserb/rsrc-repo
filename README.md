@@ -1,2 +1,2 @@
-# splunk resource-repo
+# windows resource-repo
 

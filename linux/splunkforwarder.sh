@@ -32,7 +32,7 @@ if [ -f "$FILE" ]; then
     echo "Splunk installer found..."
 else
     echo "Fetching Splunk installer from the internet..."
-    curl -Lo splunkforwarder.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.1.0&product=universalforwarder&filename=splunkforwarder-8.1.0-f57c09e87251-Linux-x86_64.tgz&wget=true'
+    curl -Lo splunkforwarder.tgz 'https://download.splunk.com/products/universalforwarder/releases/9.2.0/linux/splunkforwarder-9.2.0-1fff88043d5f-Linux-x86_64.tgz'
     tar -xvzf splunkforwarder.tgz -C /opt
 
 fi
